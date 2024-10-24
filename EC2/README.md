@@ -244,9 +244,11 @@ Prerequisites
 1.  **Navigate to Security Groups in AWS Console**:
 
     -   Go to **EC2 Dashboard** > **Network & Security** > **Security Groups**.
+
 2.  **Select Your Security Group**:
 
     -   Choose the security group associated with your EC2 instance.
+
 3.  **Edit Inbound Rules**:
 
     -   Confirm that there is an inbound rule allowing traffic on port **3306** from your IP address.
@@ -272,6 +274,7 @@ Prerequisites
     `sudo ufw status`
 
     -   If inactive, no action is needed.
+
 2.  **Allow Port 3306 Through UFW**:
 
     bash
@@ -292,13 +295,16 @@ Prerequisites
 1.  **Open DBeaver**:
 
     -   Launch DBeaver on your local machine.
+
 2.  **Create a New Database Connection**:
 
     -   Click on **"Database"** > **"New Connection"**.
+
 3.  **Select MariaDB Driver**:
 
     -   Choose **MariaDB** from the list of database drivers.
     -   If not available, you may need to install the driver.
+
 4.  **Enter Connection Details**:
 
     -   **Host**: `[EC2-Public-IP]` (Your EC2 instance's public IP)
@@ -306,6 +312,7 @@ Prerequisites
     -   **Database**: Leave blank or specify if you have created one.
     -   **Username**: `'yourusername'` (The user you created in MariaDB)
     -   **Password**: `'yourpassword'` (The password you set)
+
 5.  **Test the Connection**:
 
     -   Click on **"Test Connection"** to verify connectivity.
@@ -336,17 +343,8 @@ Prerequisites
 
         -   Note: ICMP might be blocked, so this test may not always succeed.
 
-2.  **Use Telnet to Test Port 3306**:
 
-    bash
-
-    Copy code
-
-    `telnet [EC2-Public-IP] 3306`
-
-    -   If connected, the cursor will blink or show some response.
-
-3.  **Use Nmap to Scan Port 3306**:
+2.  **Use Nmap to Scan Port 3306**:
 
     bash
 
