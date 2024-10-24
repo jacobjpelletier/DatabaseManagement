@@ -35,4 +35,4 @@ This project is broken down into six sprints, each focused on different aspects 
 ## Technologies Used
 - **Database**: MariaDB
 - **Admin Tool**: DBeaver
-# DatabaseManagement
+
